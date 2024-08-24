@@ -1,0 +1,47 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.description {
+  flex: 1;
+}
+
+.photos {
+  flex: 1;
+  height: 100vh;
+  overflow: scroll;
+  /* resimler ekran boyutu kadar olsun. sığmayınca overflow ekledik. scroll yapsın dedik.*/
+  padding-top: 30vh;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  height: 285px;
+  object-fit: cover;
+}
+
+/*ekran genişliği küçülünce yazı ile fotolar üst üste geliyor. */
+@media (max-width: 410px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .photos {
+    padding-top: 0px;
+  }
+}
+
+h1 {
+  font-family: "Noto Sans";
+}
